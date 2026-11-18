@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Computers & Laptops</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .shop-container { max-width: 900px; margin: 40px auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+        .shop-title { text-align: center; margin-bottom: 32px; }
+        .product-list { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; }
+        .product-card { background: #f8f8f8; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); padding: 20px 18px; width: 260px; text-align: center; transition: box-shadow 0.2s; }
+        .product-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.13); }
+        .product-card img { width: 120px; height: 90px; object-fit: contain; margin-bottom: 12px; }
+        .product-name { font-weight: bold; font-size: 1.1em; margin-bottom: 8px; }
+        .product-desc { color: #555; font-size: 0.98em; margin-bottom: 10px; }
+        .product-price { color: #388e3c; font-weight: bold; font-size: 1.08em; margin-bottom: 12px; }
+        .back-link { display: inline-block; margin: 18px 0 0 0; color: #4CAF50; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="shop-container">
+        <h1 class="shop-title">Shop Computers & Laptops</h1>
+        <div class="product-list">
+            <!-- PRODUCT CARDS WITH ADD TO CART BUTTONS -->
+            <div class="product-card" data-name="Access Control System" data-price="5999">
+                <img src="https://cdn.pixabay.com/photo/2017/01/10/19/05/door-1968464_1280.jpg" alt="Access Control System">
+                <div class="product-name">Access Control System</div>
+                <div class="product-desc">Secure entry system with RFID card reader, keypad, and remote management. Ideal for offices and buildings.</div>
+                <div class="product-price">R5,999</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Surveillance Camera Kit" data-price="7499">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/19/40/camera-1283968_1280.jpg" alt="Surveillance Camera Kit">
+                <div class="product-name">Surveillance Camera Kit</div>
+                <div class="product-desc">Complete CCTV kit with 4 HD cameras, DVR, night vision, and mobile monitoring. Professional installation available.</div>
+                <div class="product-price">R7,499</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Business Laptop Pro 15" data-price="18999">
+                <img src="https://cdn.pixabay.com/photo/2014/04/03/10/32/laptop-312948_1280.png" alt="Business Laptop">
+                <div class="product-name">Business Laptop Pro 15"</div>
+                <div class="product-desc">15.6" FHD, Intel i7, 16GB RAM, 512GB SSD, Windows 11 Pro</div>
+                <div class="product-price">R18,999</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Desktop Computer Elite" data-price="12499">
+                <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/computer-1294392_1280.png" alt="Desktop Computer">
+                <div class="product-name">Desktop Computer Elite</div>
+                <div class="product-desc">Intel i5, 8GB RAM, 1TB HDD, 22" Monitor, Windows 11</div>
+                <div class="product-price">R12,499</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="UltraBook Slim 14" data-price="13999">
+                <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/laptop-1954380_1280.png" alt="UltraBook">
+                <div class="product-name">UltraBook Slim 14"</div>
+                <div class="product-desc">14" FHD, Intel i5, 8GB RAM, 256GB SSD, Lightweight</div>
+                <div class="product-price">R13,999</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Gaming Laptop Xtreme" data-price="29999">
+                <img src="https://cdn.pixabay.com/photo/2012/04/13/00/22/computer-31226_1280.png" alt="Gaming Laptop">
+                <div class="product-name">Gaming Laptop Xtreme</div>
+                <div class="product-desc">17" FHD, Intel i9, 32GB RAM, 1TB SSD, RTX 4060</div>
+                <div class="product-price">R29,999</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="All-in-One PC Touch 24" data-price="15499">
+                <img src="https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377_1280.jpg" alt="All-in-One PC">
+                <div class="product-name">All-in-One PC Touch 24"</div>
+                <div class="product-desc">24" Touchscreen, Intel i5, 16GB RAM, 512GB SSD, Wireless Keyboard & Mouse</div>
+                <div class="product-price">R15,499</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Mini PC Compact" data-price="7999">
+                <img src="https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336373_1280.jpg" alt="Mini PC">
+                <div class="product-name">Mini PC Compact</div>
+                <div class="product-desc">Intel i3, 8GB RAM, 256GB SSD, Ultra-compact, Windows 11</div>
+                <div class="product-price">R7,999</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Wireless Keyboard & Mouse Combo" data-price="899">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/keyboard-1869236_1280.jpg" alt="Wireless Keyboard & Mouse">
+                <div class="product-name">Wireless Keyboard & Mouse Combo</div>
+                <div class="product-desc">Ergonomic design, 2.4GHz wireless, USB receiver, long battery life</div>
+                <div class="product-price">R899</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Precision Wireless Mouse" data-price="399">
+                <img src="https://cdn.pixabay.com/photo/2014/12/27/15/40/mouse-582733_1280.jpg" alt="Wireless Mouse">
+                <div class="product-name">Precision Wireless Mouse</div>
+                <div class="product-desc">Adjustable DPI, silent click, USB receiver, 12-month battery</div>
+                <div class="product-price">R399</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Laptop Bag 15.6" data-price="499">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/19/40/computer-1283967_1280.jpg" alt="Laptop Bag">
+                <div class="product-name">Laptop Bag 15.6"</div>
+                <div class="product-desc">Water-resistant, padded, multiple compartments, fits up to 15.6" laptops</div>
+                <div class="product-price">R499</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        <!-- Cart Sidebar -->
+        <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-header">Your Cart <span id="closeCart" style="float:right;cursor:pointer;">&times;</span></div>
+            <div id="cartItems"></div>
+            <div class="cart-total">Total: <span id="cartTotal">R0</span></div>
+            <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+            <div id="checkoutMsg" class="checkout-msg"></div>
+        </div>
+        <button id="openCartBtn" class="open-cart-btn">🛒 Cart (<span id="cartCount">0</span>)</button>
+        <script>
+        // Cart logic
+        let cart = [];
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartCount = document.getElementById('cartCount');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, idx) => {
+                total += item.price * item.qty;
+                cartItems.innerHTML += `<div class='cart-item'>
+                    <span>${item.name} (x${item.qty})</span>
+                    <span>R${item.price * item.qty}</span>
+                    <button onclick='removeCartItem(${idx})' style='margin-left:8px;'>Remove</button>
+                </div>`;
+            });
+            cartTotal.textContent = 'R' + total;
+            cartCount.textContent = cart.reduce((sum, i) => sum + i.qty, 0);
+        }
+        function removeCartItem(idx) {
+            cart.splice(idx, 1);
+            updateCart();
+        }
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.product-card');
+                const name = card.getAttribute('data-name');
+                const price = parseInt(card.getAttribute('data-price'));
+                const found = cart.find(i => i.name === name);
+                if (found) { found.qty += 1; } else { cart.push({ name, price, qty: 1 }); }
+                updateCart();
+                document.getElementById('cartSidebar').style.display = 'block';
+            });
+        });
+        document.getElementById('openCartBtn').onclick = function() {
+            document.getElementById('cartSidebar').style.display = 'block';
+        };
+        document.getElementById('closeCart').onclick = function() {
+            document.getElementById('cartSidebar').style.display = 'none';
+        };
+        document.getElementById('checkoutBtn').onclick = function() {
+            if (cart.length === 0) {
+                document.getElementById('checkoutMsg').textContent = 'Your cart is empty.';
+                return;
+            }
+            document.getElementById('checkoutMsg').textContent = 'Thank you for your order! (Demo only, no payment processed)';
+            cart = [];
+            updateCart();
+            setTimeout(()=>{
+                document.getElementById('cartSidebar').style.display = 'none';
+                document.getElementById('checkoutMsg').textContent = '';
+            }, 2000);
+        };
+        updateCart();
+        </script>
+    <style>
+    .cart-sidebar {
+        position: fixed;
+        top: 0; right: 0;
+        width: 320px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -2px 0 16px rgba(0,0,0,0.13);
+        z-index: 1000;
+        padding: 18px 18px 18px 18px;
+        display: none;
+        flex-direction: column;
+    }
+    .cart-header {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 12px;
+    }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        font-size: 1em;
+    }
+    .cart-total {
+        font-weight: bold;
+        margin: 16px 0 12px 0;
+        font-size: 1.1em;
+    }
+    .checkout-btn {
+        background: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 18px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-bottom: 10px;
+        transition: background 0.2s;
+    }
+    .checkout-btn:hover {
+        background: #388e3c;
+    }
+    .open-cart-btn {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        background: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 12px 24px;
+        font-size: 1.1em;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        cursor: pointer;
+        z-index: 1001;
+        transition: background 0.2s;
+    }
+    .open-cart-btn:hover {
+        background: #388e3c;
+    }
+    .checkout-msg {
+        color: #388e3c;
+        margin-top: 10px;
+        font-size: 1em;
+        min-height: 24px;
+    }
+    @media (max-width: 700px) {
+        .cart-sidebar { width: 98vw; }
+        .open-cart-btn { right: 8px; bottom: 8px; }
+    }
+    </style>
+    </div>
+</body>
+</html>
